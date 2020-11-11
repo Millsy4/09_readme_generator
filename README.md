@@ -1,1 +1,1 @@
-# 09_readme_generator
+{"github":"Millsy","email":"millsy4@hotmail.com","projectName":"Readme project","description":"You make readmes yo","license":"APACHE 2.0","install":"npm i","tests":"npm test","usage":"use it sparingly","contributions":"don't contribute lol"}
