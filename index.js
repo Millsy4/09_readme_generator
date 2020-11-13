@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// array of questions for user
-
 inquirer.prompt(
   [{
     type: 'input',
@@ -29,7 +27,7 @@ inquirer.prompt(
     type: 'list',
     message: 'What kind of license will your project have?',
     name: 'license',
-    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3']
+    choices: ['MIT', 'APACHE2.0', 'GPL3.0', 'BSD3']
   },
   {
     type: 'input',
@@ -54,18 +52,5 @@ inquirer.prompt(
     name: 'contributions',
   },
 ]).then(function (data) {
-//   console.log(data)
   fs.writeFile('README.md', generateMarkdown(data), err => err ? console.error(err) : console.log('Success!'));
 });
-
-// function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init();

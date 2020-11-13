@@ -1,56 +1,57 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
   //JSON.stringify(data)
-  return `# ${data.projectName}
+  return `# **${data.projectName}**
   
-  ## Description
-  
-  ${data.description}
-  
-  ## Table of Contents
-  
-  * [Installation](#installation)
+## **Description**
+![Github License](https://img.shields.io/badge/License-${data.license}-green)
 
-  * [Usage](#usage)
+${data.description}
   
-  * [License](#license)
+## **Table of Contents**
   
-  * [Contributing](#contributing)
+* [Installation](#installation)
+
+* [Usage](#usage)
   
-  * [Tests](#tests)
+* [License](#license)
   
-  * [Questions](#questions)
+* [Contributing](#contributing)
   
-  ## Installation
+* [Tests](#tests)
   
-  **To install necessary dependencies, run the following command:**
+* [Questions](#questions)
   
-  *${data.install}*
+## **Installation**
   
-  ## Usage
+To install necessary dependencies, run the following command:
   
-  ${data.usage}
+*${data.install}*
   
-  ## License
+## **Usage**
   
-  This project is licensed under the ${data.license} license.
+${data.usage}
   
-  ## Contributing
+## **License**
   
-  ${data.contributions}
+This project is licensed under the ${data.license} license.
   
-  ## Tests
+## **Contributing**
   
-  To run tests, run the following command:
+${data.contributions}
+  
+## **Tests**
+  
+To run tests, run the following command:
   
   
-  *${data.tests}*
+*${data.tests}*
   
   
-  ## Questions
+## **Questions**
   
-  If you have any questions about the repo, open an issue or contact me directly at *${data.email}*.
-  You can find more of my work at [${data.github}](https://github.com/${data.github}/).`;
+If you have any questions about the repo, open an issue or contact me directly at *${data.email}*.
+You can find more of my work at [${data.github}](https://github.com/${data.github}/).`;
 }
 
 module.exports = generateMarkdown;
