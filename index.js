@@ -52,5 +52,5 @@ inquirer.prompt(
     name: 'contributions',
   },
 ]).then(function (data) {
-  fs.writeFile('README.md', generateMarkdown(data), err => err ? console.error(err) : console.log('Success!'));
+  fs.writeFile('./sample/README.md', generateMarkdown(data), err => err ? console.error(err) : console.log('Success!'));
 });
